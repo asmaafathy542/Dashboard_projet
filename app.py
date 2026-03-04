@@ -11,6 +11,7 @@ st.set_page_config(page_title="AroundU | Owner Dashboard", layout="wide")
 # --- MOCK DATA ENGINE ---
 @st.cache_data
 def load_data():
+    np.random.seed(42)
     dates = pd.date_range(start="2023-03-01", periods=365, freq='D')
     data = pd.DataFrame({
         'Date': dates,
